@@ -17,7 +17,7 @@ public class BookEntity implements Serializable {
     private String author;
     @Column(name = "year", unique = true , nullable = false)
     private int year;
-    @Column(name ="description",length = 1000, unique = true , nullable = true)
+    @Column(name ="description",length = 1000)
     private String description;
 
     public Long getId() {
