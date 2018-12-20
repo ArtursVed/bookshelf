@@ -1,9 +1,10 @@
 package lv.tsi.javacourses.bookshelf.books.model;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
+
+@Entity(name = "Book")
+@Table(name = "books")
 
 public class BookEntity implements Serializable {
     @Id
@@ -52,11 +53,11 @@ public class BookEntity implements Serializable {
         this.author = author;
     }
 
-    public int getSear() {
+    public int getYear() {
         return year;
     }
 
-    public void setSear(int sear) {
+    public void setYear(int year) {
        this.year = year;
     }
 
