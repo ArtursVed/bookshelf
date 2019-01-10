@@ -18,11 +18,18 @@ public class SingleBookBean implements Serializable {
     private EntityManager em;
 
     private Long id;
+    private BookEntity book;
+
+    public void openBook(){
+
+        System.out.println("Opening book" + id);
+        book = em.find(BookEntity.class,id);
+    }
 
     public BookEntity getBook(){
 
-        System.out.println("Opening book" + id);
-        return em.find(BookEntity.class,id);
+       return book;
+
 
     }
 

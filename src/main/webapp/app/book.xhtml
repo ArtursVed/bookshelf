@@ -14,6 +14,7 @@
         <f:metadata>
 
             <f:viewParam name="id" value="#{singleBookBean.id}"/>
+            <f:viewAction action="#{singleBookBean.openBook}"/>
         </f:metadata>
 
         <h1>#{singleBookBean.book.title}</h1>
@@ -38,6 +39,11 @@
                 <td>#{singleBookBean.book.year}</td>
             </tr>
         </table>
+        <h:form>
+            <h:commandButton value="Reserve for ME"
+                             action="#{bookReservationBean.reserved(singleBookBean.id)}"/>
+
+        </h:form>
     </ui:define>
 </ui:composition>
 
