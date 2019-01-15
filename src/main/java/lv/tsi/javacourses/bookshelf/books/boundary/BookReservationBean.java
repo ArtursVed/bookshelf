@@ -42,6 +42,10 @@ public class BookReservationBean {
 
 
     }
-
+ public List<ReservationEntity> getReservations() {
+        return em.createQuery("select r from Reservation r",
+                ReservationEntity.class)
+                .getResultList();
+    }
 
 }
