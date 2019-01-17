@@ -22,6 +22,7 @@ public class ReservationEntity implements Serializable {
     private UserEntity user;
 
     @Column
+    @Enumerated(EnumType.STRING)
     private ReservationStatus status;
 
     @Column
